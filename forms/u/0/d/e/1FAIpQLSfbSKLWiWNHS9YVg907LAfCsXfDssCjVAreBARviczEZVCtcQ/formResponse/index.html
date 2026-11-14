@@ -9,6 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Google 表單">
   <title>[摩斯漢堡顧客消費滿意調查]</title>
+  
+  <!-- Google Forms Official Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
   <!-- Google Forms Clipboard Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23673AB7' d='M34 6H14c-2.2 0-4 1.8-4 4v28c0 2.2 1.8 4 4 4h20c2.2 0 4-1.8 4-4V10c0-2.2-1.8-4-4-4z'/%3E%3Cpath fill='%23FFF' d='M18 16h12v3H18zm0 6h12v3H18zm0 6h8v3H18z'/%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23673AB7'/%3E%3Cpath fill='%23FFF' d='M34 10H14c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h20c2.2 0 4-1.8 4-4V14c0-2.2-1.8-4-4-4z'/%3E%3Cpath fill='%23673AB7' d='M18 18h12v3H18zm0 6h12v3H18zm0 6h8v3H18z'/%3E%3C/svg%3E">
@@ -23,7 +29,7 @@
     body {
       background-color: #fce6e9;
       font-family: Roboto, Arial, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #202124;
+      color: #1f1f1f;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -40,7 +46,7 @@
       gap: 12px;
     }
 
-    /* Top Banner Card (Pure White, No Red Bar - matching Image 1) */
+    /* Top Banner Card (Pure White, matching Image 1) */
     .banner-card {
       background-color: #ffffff;
       border: 1px solid #dadce0;
@@ -69,7 +75,7 @@
       border-radius: 8px;
       position: relative;
       overflow: hidden;
-      padding: 24px 20px 26px 20px;
+      padding: 24px 22px 28px 22px;
       box-shadow: 0 1px 2px rgba(60,64,67,0.08);
     }
 
@@ -86,15 +92,17 @@
       border-top-right-radius: 7px;
     }
 
+    /* Exact Google Forms Title Style (.F9yp7e: 32px, 400, 40px line-height, #1f1f1f) */
     .title {
-      font-size: 24.5px;
+      font-family: "Google Sans", Roboto, "Noto Sans TC", Arial, sans-serif;
+      font-size: 32px;
       font-weight: 400;
-      color: #202124;
+      line-height: 40px;
+      color: #1f1f1f;
       margin-top: 2px;
       margin-bottom: 16px;
-      letter-spacing: -0.2px;
+      letter-spacing: 0;
       word-break: break-word;
-      line-height: 1.35;
     }
 
     .title-br {
@@ -107,16 +115,24 @@
       }
     }
 
+    /* Exact Google Forms Confirmation Message Style (.md0UAd / .cBGGJ: 14px, 400, 20px line-height, #1f1f1f) */
     .thank-you-msg {
+      font-family: Roboto, Arial, "Noto Sans TC", sans-serif;
       font-size: 14px;
-      color: #202124;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #1f1f1f;
       margin-bottom: 22px;
     }
 
     .contact-info {
-      font-size: 13.5px;
-      color: #202124;
-      line-height: 1.68;
+      font-family: Roboto, Arial, "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #1f1f1f;
       margin-bottom: 26px;
       word-break: break-all;
     }
@@ -131,8 +147,10 @@
       text-decoration: underline;
     }
 
+    /* Google Forms Link Style (14px, #1a73e8) */
     .submit-another {
       display: inline-block;
+      font-family: Roboto, Arial, "Noto Sans TC", sans-serif;
       color: #1a73e8;
       font-size: 14px;
       text-decoration: underline;
@@ -156,9 +174,9 @@
     }
 
     .footer-text {
-      font-size: 11.5px;
+      font-size: 12px;
       color: #5f6368;
-      line-height: 1.55;
+      line-height: 16px;
     }
 
     .footer-text a {
@@ -172,33 +190,38 @@
       justify-content: center;
       gap: 5px;
       color: #5f6368;
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 400;
       margin-top: 6px;
       user-select: none;
     }
 
     .google-branding .google-logo {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: "Product Sans", "Google Sans", Roboto, Arial, sans-serif;
       font-weight: 500;
-      font-size: 21px;
+      font-size: 22px;
       color: #5f6368;
       letter-spacing: -0.3px;
     }
 
     .google-branding .forms-txt {
-      font-size: 19px;
+      font-family: "Google Sans", "Noto Sans TC", sans-serif;
+      font-size: 20px;
       font-weight: 400;
       color: #5f6368;
     }
 
-    /* Mobile fine-tuning */
+    /* Responsive adjustments */
     @media (max-width: 480px) {
       body {
         padding: 10px 14px 32px 14px;
       }
       .content-card {
         padding: 22px 18px 24px 18px;
+      }
+      .title {
+        font-size: 32px;
+        line-height: 40px;
       }
       .banner-card {
         padding: 20px 14px;
